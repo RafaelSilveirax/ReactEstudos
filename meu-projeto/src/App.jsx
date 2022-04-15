@@ -29,6 +29,8 @@ function App() {
       <SayMyName nome={nomeEx} />
       <Pessoa nome="uiui" idade="99" foto={url} />
       <List/>
+      <h1>Olá Mundo React</h1>
+      <h1>Olá Mundo React</h1>
     </div>
   );
 }
