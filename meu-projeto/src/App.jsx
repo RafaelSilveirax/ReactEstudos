@@ -1,18 +1,27 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
+import { Footer } from './components/layout/Footer';
+import { NavBar } from './components/layout/NavBar';
+import { Contato } from './components/pages/Contato';
+import { Empresa } from './components/pages/Empresa';
+import { Home } from './components/pages/Home';
 
-import Condicional from './components/Condicional';
-import { OutraLista } from './components/OutraLista';
+
+
 
 function App() {
 
-  const meusItens = ['React', 'Vue', 'Angular',]
 
   return (
-    <div className="App">
-      <h1>Renderização Condicional</h1>
-      <OutraLista itens={meusItens}/>
-      <OutraLista itens={[]}/>
-    </div>
+    <Router>
+      <NavBar/>
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/empresa" element={<Empresa/>} />
+        <Route path="/contato" element={<Contato/>} />
+      </Routes>
+      <Footer/>
+    </Router>
   );
 }
 
