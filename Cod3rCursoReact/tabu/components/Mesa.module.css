@@ -1,0 +1,10 @@
+.Mesa{
+    background-color: rgb(224, 226, 222);
+    border: 1px solid red;
+    border-color: blue;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+}
+
